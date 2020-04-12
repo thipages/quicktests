@@ -1,4 +1,4 @@
-# quicksql
+# quicktests
 Quick PHP Unit Tests
 
 ### Installation
