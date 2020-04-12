@@ -5,12 +5,12 @@ Quick PHP Unit Tests
 **composer** require thipages\quicktests
 
 ### Usage of QTests class
-#### through the following static methods
+#### through the following static method
 ```php
     getOutput  ($qTestsOrList, $htmlOutput=false, $idFilter=null)
 ```
 
-#### Examples
+#### Example
 ```php
   $html=QTests::getOutput(Tests_Foo::class);
                 or
