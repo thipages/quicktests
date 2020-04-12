@@ -9,13 +9,13 @@ class QTests {
             ['style' => 'border-style:none;width:300px;overflow:hidden', 'readonly' => true]
         );
     }
-    public static function getOutput($iQTestsOrList, $htmlOutput=false, $idFilter=null) {
-        if (!is_array($iQTestsOrList)) $iQTestsOrList=[$iQTestsOrList];
+    public static function getOutput($qTestsOrList, $htmlOutput=false, $idFilter=null) {
+        if (!is_array($qTestsOrList)) $qTestsOrList=[$qTestsOrList];
         $headers=['Description', 'Result', 'Actual', 'Expected'];
         if ($htmlOutput) $headers[]="Html";
         $html = [];
-        if ($idFilter!==null) $iQTestsOrList=[$iQTestsOrList[$idFilter[0]]];
-        foreach ($iQTestsOrList as $test) {
+        if ($idFilter!==null) $qTestsOrList=[$qTestsOrList[$idFilter[0]]];
+        foreach ($qTestsOrList as $test) {
             $res = [];
             $index=0;
             foreach ($test::tests() as $dataset) {

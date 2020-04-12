@@ -7,7 +7,7 @@ Quick PHP Unit Tests
 ### Usage of QTests class
 #### through the following static methods
 ```php
-    getOutput  ($iQTestsOrList, $htmlOutput=false, $idFilter=null)
+    getOutput  ($qTestsOrList, $htmlOutput=false, $idFilter=null)
 ```
 
 #### Examples
