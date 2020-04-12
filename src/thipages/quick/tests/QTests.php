@@ -9,7 +9,7 @@ class QTests {
             ['style' => 'border-style:none;width:300px;overflow:hidden', 'readonly' => true]
         );
     }
-    public static function getOutput($qTestsOrList, $htmlOutput=false, $idFilter=null) {
+    public static function test($qTestsOrList, $htmlOutput=false, $idFilter=null) {
         if (!is_array($qTestsOrList)) $qTestsOrList=[$qTestsOrList];
         $headers=['Description', 'Result', 'Actual', 'Expected'];
         if ($htmlOutput) $headers[]="Html";
@@ -18,7 +18,7 @@ class QTests {
         foreach ($qTestsOrList as $test) {
             $res = [];
             $index=0;
-            foreach ($test::tests() as $dataset) {
+            foreach ($test::dataSet() as $dataset) {
                 if ($idFilter===null || ($idFilter!==null && $idFilter[1]===$index)) {
                     $temp= [
                         $dataset[2],

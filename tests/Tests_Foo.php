@@ -1,6 +1,6 @@
 <?php
 class Tests_Foo {
-    public static function tests() {
+    public static function dataSet() {
         return [
             [true, true, "True  is true"],
             [true, false, "true is not false"],

@@ -7,20 +7,20 @@ Quick PHP Unit Tests
 ### Usage of QTests class
 #### through the following static method
 ```php
-    getOutput  ($qTestsOrList, $htmlOutput=false, $idFilter=null)
+    test  ($qTestsOrList, $htmlOutput=false, $idFilter=null)
 ```
 
 #### Example
 ```php
-  $html=QTests::getOutput(Tests_Foo::class);
+  $html=QTests::test(Tests_Foo::class);
                 or
-  $html=QTests::getOutput([Tests_Foo1::class,Tests_Foo2::class]);
+  $html=QTests::test([Tests_Foo1::class,Tests_Foo2::class]);
   
-  // where Tests_Foo needs to have s static tests() method
+  // where Tests_Foo needs to have s static dataSet() method
   // being an array of tests to perform and containing a 3 items array (actual,expected,description)
 
   class Tests_Foo {                              // test group Tests_Foo
-      public static function tests() {
+      public static function dataSet() {
           return [
               [true, true, "True  is true"],      // test 1
               [true, false, "true is not false"], // test 2
