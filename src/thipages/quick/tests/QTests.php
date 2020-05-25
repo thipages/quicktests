@@ -5,9 +5,9 @@ use thipages\quick\QTag;
 class QTests {
     public static function textarea($value) {
         return QTag::tag(
-            'textarea', $value,
+            'textarea',
             ['style' => 'border-style:none;width:300px;overflow:hidden', 'readonly' => true]
-        );
+        )($value);
     }
     public static function test($qTestsOrList, $htmlOutput=false, $idFilter=null) {
         if (!is_array($qTestsOrList)) $qTestsOrList=[$qTestsOrList];
@@ -31,7 +31,7 @@ class QTests {
                 }
                 $index++;
             }
-            $html[] = QTag::tag('h3', $test);
+            $html[] = QTag::tag('h3')($test);
             $html[] = QTable::create($headers, $res, ['border' => 1]);
         }
         return join('',$html);
