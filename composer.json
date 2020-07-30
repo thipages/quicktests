@@ -1,6 +1,6 @@
 {
     "name": "thipages/quicktests",
-    "version": "v0.3.0",
+    "version": "v0.4.0",
     "description": "Quick PHP unit tests",
     "type": "library",
     "keywords" : ["html","unit tests","quick"],
